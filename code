@@ -1,0 +1,47 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    long long a, b, s1 = 1, s2 = 1, d;
+    
+    cin >> a >> b;
+    
+    for(d = 2; d * d < a; d ++)
+    {
+        if(a % d == 0)
+        {
+            s1 = s1 + d + (a / d);
+        }
+    }
+    
+    if(d * d == a)
+    {
+        s1 = s1 + d;
+    }
+    
+    for(d = 2; d * d < s1; d++)
+    {
+        if(s1 % d == 0)
+        {
+            s2 = s2 + d + (s1 / d);
+        }
+    }
+    
+    if(d * d == s1)
+    {
+        s2 + s2 + d;
+    }
+    
+    if(s2 == a)
+    {
+        cout << "PRIETENE";
+    }
+    else
+    {
+        cout << "NU SUNT PRIETENE";
+    }
+    
+    return 0;
+}
